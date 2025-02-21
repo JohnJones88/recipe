@@ -14,11 +14,12 @@ const Recipe = sequelize.define('recipe', {
 
   },
   meat_Type: {
-    type: DataTypes.ENUM('Beef', 'Pork', 'Chicken', 'Non-meat(Plant Based)')
+    type: DataTypes.ENUM('Beef', 'Pork', 'Chicken', 'Plant Based')
+
   },
-  steps: {
-    type: DataTypes.STRING(256),
-    allowNull: false
+  non_Meat_Type: {
+    type: DataTypes.ENUM('Starch', 'Vegetable', 'Dessert', 'Fruit')
+
   },
  
  imageUrl: {
