@@ -3,7 +3,7 @@ const Users = require('../db/users-models');
 const { validateToken } = require('../utils/authentication');
 const validator = require('validator');
 const router = express.Router();
-const Recipe = require('../db/recipe-models');
+const Recipe = require('../db/recipes-models');
 
 router.post('/', async (req, res) => {
 

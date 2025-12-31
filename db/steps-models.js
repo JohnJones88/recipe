@@ -1,17 +1,20 @@
 const { sequelize } = require('./data-connections');
 const { DataTypes } = require('sequelize');
-const Recipe = require('./recipe-models');
+const Recipe = require('./recipes-models');
 
 const Steps = sequelize.define('steps', {
     recipeId: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
         primaryKey: true
       },
     id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
+      //autoIncrement: true,
       primaryKey: true
+    },
+    RecDescription:{
+      type:DataTypes.STRING(64),
+      allowNull: false
     },
   
     sortNumber:{
@@ -19,11 +22,7 @@ const Steps = sequelize.define('steps', {
         allowNull: false
 
     },
-    description:{
-        type:DataTypes.STRING(64),
-        allowNull: false
-
-    },
+    
 
 
 })
